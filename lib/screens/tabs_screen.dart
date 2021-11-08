@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, prefer_final_fields, unused_field
 
 import 'package:flutter/material.dart';
+import 'package:my_food/main.dart';
 import 'package:my_food/screens/categories_screen.dart';
 import 'package:my_food/screens/favorites_screen.dart';
 
@@ -18,6 +19,7 @@ class _TabsScreenState extends State<TabsScreen> {
   ];
 
   int _selectedPageIndex = 0;
+  bool _value = false;
 
   void _selectPage(int index) {
     setState(() {
@@ -30,6 +32,21 @@ class _TabsScreenState extends State<TabsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
+        actions: [
+          Switch(
+            value: _value,
+            onChanged: (newValue) {
+              setState(() {
+                _value = newValue;
+                if (_value) {
+                  MyApp.of(context)!.changeTheme(ThemeMode.dark);
+                } else {
+                  MyApp.of(context)!.changeTheme(ThemeMode.light);
+                }
+              });
+            },
+          ),
+        ],
       ),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
