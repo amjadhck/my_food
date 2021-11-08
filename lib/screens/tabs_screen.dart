@@ -33,7 +33,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
         actions: [
-          Switch(
+          Switch.adaptive(
             value: _value,
             onChanged: (newValue) {
               setState(() {

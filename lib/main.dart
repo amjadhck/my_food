@@ -33,33 +33,7 @@ class _MyAppState extends State<MyApp> {
       themeMode: _themeMode,
       theme: lightTheme,
       darkTheme: darkTheme,
-      // ThemeData(
-      //   //colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black),
-      //   primaryColor: Colors.pink,
-      //   primarySwatch: Colors.pink,
 
-      //   //secondary: Colors.black,
-      //   //background: Colors.pink.shade500,
-      //   //onPrimary: Colors.red,
-      //   //onSecondary: Colors.amber,
-      //   //onBackground: Colors.blueGrey,
-      //   canvasColor: const Color.fromRGBO(255, 254, 229, 1),
-      //   fontFamily: 'Raleway',
-      //   textTheme: ThemeData.light().textTheme.copyWith(
-      //         bodyText1: const TextStyle(
-      //           color: Colors.white,
-      //           // color: Color.fromRGBO(20, 51, 51, 1),
-      //         ),
-      //         bodyText2: const TextStyle(
-      //           color: Color.fromRGBO(20, 51, 51, 1),
-      //         ),
-      //         caption: const TextStyle(
-      //           fontSize: 23,
-      //           fontFamily: 'RobotoCondensed',
-      //           fontWeight: FontWeight.bold,
-      //         ),
-      //       ),
-      // ),
       //home: CategoriesScreen(),
       routes: {
         '/': (context) => const TabsScreen(),
